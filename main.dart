@@ -94,8 +94,6 @@ void main() {
   //    print('true');
   //   }
   // },);
-  
-
 
   // ------------------------------------------------- //
   // List<String> dataList = [];
@@ -106,13 +104,13 @@ void main() {
   //   {"type": "Photo", "path": "https://example.com/photo2.jpg"},
   //   {"type": "Document", "path": "https://example.com/doc1.pdf"}
   // ];
-  
+
   // Test Case : 01
   // dataList.addAll(doucumentList
   //     .where((element) => element['type'] == 'Photo')
   //     .map((e) => "${e['path']}")
   //     .toList());
-  
+
   // Test Case : 02
   // dataList.addAll(doucumentList
   //     .where((element) => element['type'] == 'Photo')
@@ -122,10 +120,8 @@ void main() {
   //     .toList());
 
   //print(dataList);
-  
-   
-  
-  // ---------------------------------------- // 
+
+  // ---------------------------------------- //
   // //WhereIterable<Map<String, String>>
   // var typeOf = doucumentList.where((element) => element['type'] == 'Photo');
   // print(typeOf.runtimeType);
@@ -137,8 +133,6 @@ void main() {
   // // Getting Boolean Check from List //
   // var isExist = doucumentList.any((element) => element['type'] == 'Photo');
   // print(isExist.runtimeType);
-   
-
 
   // ---------------------------------------- //
   // var products = [
@@ -149,7 +143,7 @@ void main() {
   // ];
 
   // List<int> productWithPrice = [];
-  
+
   // Get a list of price of Single Element //
   // productWithPrice.addAll(products
   //     .where((element) => element['name'] == 'Laptop')
@@ -157,7 +151,7 @@ void main() {
   //       (e) => e['price'] as int,
   //     )
   //     .toList());
-  
+
   // Get a list of All Price keyword //
   // productWithPrice.addAll(products
   //     .where((element) => element.containsKey('price'))
@@ -167,15 +161,10 @@ void main() {
   //     .toList());
 
   // print(productWithPrice);
-  
 
-  // inquiry about the element value if its contain in the list // 
+  // inquiry about the element value if its contain in the list //
   // bool isExist = products.any((element) => element.containsValue('Keyboard'),);
   // print(isExist);
-  
-
-
-
 
   // ----------------------------------------------- //
   // var products1 = [
@@ -184,11 +173,9 @@ void main() {
   //   {'name': 'Keyboard', 'price': 50},
   //   {'name': 'Laptop', 'price': 1200},
   // ];
-  
 
   //List<String> laptopName = [];
   //List<int> laptopPrice = [];
-  
 
   // Make List of Name for one single element from the List of Map //
   // laptopName.addAll(products1
@@ -197,16 +184,14 @@ void main() {
   //       (e) => e['name'] as String,
   //     )
   //     .toList());
-   
 
-  // Make List of price for one single element from the List of Map // 
+  // Make List of price for one single element from the List of Map //
   // laptopPrice.addAll(products1
   //     .where((element) => element['name'] == 'Laptop')
   //     .map(
   //       (e) => e['price'] as int,
   //     )
   //     .toList());
-  
 
   //Where price key found make them all in one list //
   // laptopName.addAll(products1
@@ -217,4 +202,51 @@ void main() {
   //     .toList());
 
   //print(laptopName);
+
+
+
+
+  // -------------------------------------------------------//
+  // Find the Employees name who works more then 5 years //
+  List<String> moreThenFiveYearsYname = [];
+   
+  // From List of Model Class 
+  //   List<Employee> employees = [
+  //   Employee('Alice', 3),
+  //   Employee('Bob', 6),
+  //   Employee('Charlie', 2),
+  //   Employee('Dave', 8),
+  //   Employee('Eve', 4),
+  // ];
+  // moreThenFiveYearsYname.addAll(employees
+  //     .where((element) => element.yearsOfService > 5)
+  //     .map(
+  //       (e) => e.name,
+  //     )
+  //     .toList());
+  
+  // -------------------------------------------------------//
+  // From List of Map //
+  //   var employeesDetails = [
+  //   {'name': 'Bob', 'year': 6},
+  //   {'name': 'nob', 'year': 8},
+  //   {'name': 'harry', 'year': 4},
+  //   {'name': 'can', 'year': 10},
+  // ];
+  // moreThenFiveYearsYname.addAll(employeesDetails
+  //     .where((element) => element['year'] as int > 5)
+  //     .map((e) => e['name'] as String)
+  //     .toList());
+
+  //print(moreThenFiveYearsYname);
+
+
+  
 }
+
+// class Employee {
+//   String name;
+//   int yearsOfService;
+
+//   Employee(this.name, this.yearsOfService);
+// }
