@@ -208,7 +208,8 @@ void main() {
 
   // -------------------------------------------------------//
   // Find the Employees name who works more then 5 years //
-  List<String> moreThenFiveYearsYname = [];
+  
+  //List<String> moreThenFiveYearsYname = [];
    
   // From List of Model Class 
   //   List<Employee> employees = [
@@ -233,6 +234,12 @@ void main() {
   //   {'name': 'harry', 'year': 4},
   //   {'name': 'can', 'year': 10},
   // ];
+
+  // moreThenFiveYearsYname.addAll(employeesDetails.where((element) => element['year'] as int > 5));
+  // print(moreThenFiveYearsYname);
+  // print( moreThenFiveYearsYname.map((e) => e['name']).toList());
+
+
   // moreThenFiveYearsYname.addAll(employeesDetails
   //     .where((element) => element['year'] as int > 5)
   //     .map((e) => e['name'] as String)
@@ -241,7 +248,7 @@ void main() {
   //print(moreThenFiveYearsYname);
 
 
-  
+
 }
 
 // class Employee {
