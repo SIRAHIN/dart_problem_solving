@@ -203,15 +203,12 @@ void main() {
 
   //print(laptopName);
 
-
-
-
   // -------------------------------------------------------//
   // Find the Employees name who works more then 5 years //
-  
-  //List<String> moreThenFiveYearsYname = [];
-   
-  // From List of Model Class 
+
+  List moreThenFiveYearsYname = [];
+
+  // From List of Model Class
   //   List<Employee> employees = [
   //   Employee('Alice', 3),
   //   Employee('Bob', 6),
@@ -225,30 +222,50 @@ void main() {
   //       (e) => e.name,
   //     )
   //     .toList());
-  
+
   // -------------------------------------------------------//
   // From List of Map //
-  //   var employeesDetails = [
-  //   {'name': 'Bob', 'year': 6},
-  //   {'name': 'nob', 'year': 8},
-  //   {'name': 'harry', 'year': 4},
-  //   {'name': 'can', 'year': 10},
-  // ];
+  var employeesDetails = [
+    {'name': 'Bob', 'year': 6},
+    {'name': 'nob', 'year': 8},
+    {'name': 'harry', 'year': 4},
+    {'name': 'can', 'year': 10},
+  ];
 
-  // moreThenFiveYearsYname.addAll(employeesDetails.where((element) => element['year'] as int > 5));
+  // moreThenFiveYearsYname
+  //     .addAll(employeesDetails.where((element) => element['year'] as int > 5));
   // print(moreThenFiveYearsYname);
-  // print( moreThenFiveYearsYname.map((e) => e['name']).toList());
+  // print(moreThenFiveYearsYname.map((e) => e['year']).toList());
 
 
-  // moreThenFiveYearsYname.addAll(employeesDetails
+   // moreThenFiveYearsYname.addAll(employeesDetails
   //     .where((element) => element['year'] as int > 5)
   //     .map((e) => e['name'] as String)
   //     .toList());
 
-  //print(moreThenFiveYearsYname);
+  // print(moreThenFiveYearsYname);
 
 
 
+  // ==== Calculate total numbver using where --- map --- fold  ==== //
+  //int totalyears = 0;
+
+  // totalyears += moreThenFiveYearsYname.fold(
+  //   0,
+  //   (previousValue, element) => previousValue + element['year'] as int,
+  // );
+
+  // totalyears += employeesDetails
+  //     .where((element) => element['year'] as int > 5)
+  //     .map((e) => e['year'] as int)
+  //     .fold(
+  //       0,
+  //       (previousValue, element) => previousValue + element ,
+  //     );
+
+  //print(totalyears);
+
+ 
 }
 
 // class Employee {
